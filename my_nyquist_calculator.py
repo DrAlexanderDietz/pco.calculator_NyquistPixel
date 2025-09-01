@@ -47,7 +47,7 @@ def plot_pxl_per_blurr(magnification, num_aprt, wavelength_nm, pxl_ref, addition
     ax.set_ylabel("Numerical Aperture NA")
     ax.set_title("Optical Sampling Performance:\n \n"
                  f"Settings: {pxl_ref:.1f} µm pixels | {wavelength_nm:.0f} nm | Add. Magn. {additional_mag:.1f}×\n")
-    ax.grid(True, linestyle="dotted")
+    ax.grid(True, linestyle="-")
     ax.minorticks_on()
     ax.grid(which='minor', linestyle='dotted')
     ax.set_xscale(xscale)
@@ -96,6 +96,7 @@ num_aprt = list(np.arange(0.095, 1.6, 0.02))
 
 fig = plot_pxl_per_blurr(magnification, num_aprt, wavelength, pxl_ref, add_mag, xscale=xscale_choice, yscale=yscale_choice)
 st.pyplot(fig)
+
 
 
 
