@@ -69,15 +69,15 @@ def plot_pxl_per_blurr(magnification, num_aprt, wavelength_nm, pxl_ref, addition
 # ------------------- STREAMLIT APP -------------------
 st.title("pco.calculator - Nyquist Sampling")
 
-st.write("This is a small application to figure out which pixelsize best suits your microscope system. " \
-"Use the slider bars on the left side to set the illumination wavelength and the pixel pitch of your camera of interest, e.g. 2.5 µm " \
-"for pco.panda 26, 4.6 µm for pco.edge 9.4 bi or 6.5 µm for pco.edge 4.2."\
- " Further, you can acount for any possible additional maginification within the optical path. You can cange the scaling of the axes from" \
- " linear to logarithmic according to your prefferences.")
+st.write("""This is a small application to figure out which pixelsize best suits your microscope system. 
+Use the slider bars on the left side to set the illumination wavelength and the pixel pitch of your camera of interest, e.g. 2.5 µm 
+for pco.panda 26, 4.6 µm for pco.edge 9.4 bi or 6.5 µm for pco.edge 4.2.
+Further, you can account for any possible additional magnification within the optical path. You can change the scaling of the axes from
+linear to logarithmic according to your prefferences.""")
 
-st.write("For ideal sampling performance it is generally understod that the optical resolution limit of the microscope should" \
- "be 2 - 2.4 times the pixel pitch, which relates to a green to yellow color coding in the graph below. Under this condition, "
- "or system configuration, respectively, we speek of 'Nyquist Sampling'.")
+st.write("""For ideal sampling performance it is generally understod that the optical resolution limit of the microscope should
+be 2 to 2.4 times the pixel pitch, which relates to a green to yellow color coding in the graph below. Under this condition,
+or system configuration, respectively, we speek of 'Nyquist Sampling'.""")
 
 # Sidebar controls
 st.sidebar.header("Controls")
@@ -95,5 +95,6 @@ num_aprt = list(np.arange(0.095, 1.6, 0.02))
 
 fig = plot_pxl_per_blurr(magnification, num_aprt, wavelength, pxl_ref, add_mag, xscale=xscale_choice, yscale=yscale_choice)
 st.pyplot(fig)
+
 
 
