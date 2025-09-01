@@ -47,9 +47,9 @@ def plot_pxl_per_blurr(magnification, num_aprt, wavelength_nm, pxl_ref, addition
     ax.set_ylabel("Numerical Aperture NA")
     ax.set_title("Optical Sampling Performance:\n \n"
                  f"Settings: {pxl_ref:.1f} µm pixels | {wavelength_nm:.0f} nm | Add. Magn. {additional_mag:.1f}×\n")
-    ax.grid(True, linestyle="-", alpha=0.5)
+    ax.grid(True, linestyle="-", alpha=0.4)
     ax.minorticks_on()
-    ax.grid(which='minor', linestyle='dotted', alpha = 0.5)
+    ax.grid(which='minor', linestyle='dotted', alpha = 0.4)
     ax.set_xscale(xscale)
     ax.set_yscale(yscale)
 
@@ -74,7 +74,7 @@ st.write("""This is a small application to figure out which pixelsize best suits
 Use the slider bars on the sidebar to the left to set the illumination wavelength and the pixel pitch of your camera of interest, e.g. 2.5 µm 
 for pco.panda 26, 4.6 µm for pco.edge 9.4 bi or 6.5 µm for pco.edge 4.2.
 Further, you can account for any possible additional magnification within the optical path. You can change the scaling of the axes from
-linear to logarithmic according to your prefferences.""")
+linear to logarithmic according to your preferences.""")
 
 st.write("""For ideal sampling performance it is generally understod that the optical resolution limit of the microscope should
 be 2 to 2.4 times the pixel pitch, which relates to a green to yellow color coding in the graph below. Under this condition,
@@ -96,6 +96,7 @@ num_aprt = list(np.arange(0.095, 1.6, 0.02))
 
 fig = plot_pxl_per_blurr(magnification, num_aprt, wavelength, pxl_ref, add_mag, xscale=xscale_choice, yscale=yscale_choice)
 st.pyplot(fig)
+
 
 
 
