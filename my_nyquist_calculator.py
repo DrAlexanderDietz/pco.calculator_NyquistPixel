@@ -183,6 +183,30 @@ st.image("images/Airy_disk_spacing_near_Rayleigh_criterion.png", caption="""Airy
          Rayleigh criterion (middle) can be distinguished. Points closer than the Rayleigh criterion (bottom) are difficult to 
          distinguish. Image taken from: https://en.wikipedia.org/wiki/Angular_resolution#The_Rayleigh_criterion""")
 
+st.write("""Since the time of Abbe and Rayleigh, microscopy has been digitized and optical limitations are no longer the
+         sole determinants of the resolution. The human eye has largely been supplanted by electronic point
+         detectors or camera sensors. All of which sample continuous image data as a discrete grid of pixels, i.e. a 
+         bitmap. Each pixel in a digital image covers a specific area of the sample and the average intensity of light
+         originating from that area is typically represented by an integral value.
+
+In the ideal case, the number of pixels in a digital image would be infinitely large and the physical area
+         represented by each pixel would be infinitesimally small. This way, no information would be lost in the
+         sampling process and resolution of the final image would only be limited by optics. If on the other hand,
+         only a single pixel would be used to represent all the information contained within the field of view of a 
+         microscope, the image would just be a grey plane. The only information that could be recorded in this case 
+         would be the average intensity of the sample.
+
+In light of these considerations it becomes apparent that proper choice of pixel numbers and their size
+         is instrumental to maximizing the full resolving power of a microscope. Here, the Nyquist-Shannon sampling 
+         theorem dictates that a continuous analog signal should be oversampled by at least a factor of two to
+         obtain an accurate digital representation [14]. Therefore, to image with a resolution of e.g. 250 nanometers, 
+         pixels should be smaller than 125 nanometers. This way, the intensity drop between two  overlapping Airy functions 
+         can be detected as to satisfy the Rayleigh criterion. One could always use more pixels than needed according to the 
+         theorem, i.e. oversample. However, a point emitter only emits a finite number of photons, spreading these out over too 
+         many pixels would ultimately render them indistinguishable from the noise level.
+         
+Source: Vangindertael et al., "An Introduction to optical super-resolution microscopy for the adventurous biologist", Methods Appl. Fluoresc.
+         6 (2018) 022003""")
 
 
 
