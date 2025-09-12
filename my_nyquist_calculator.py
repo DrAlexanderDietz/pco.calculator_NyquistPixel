@@ -199,7 +199,7 @@ In the ideal case, the number of pixels in a digital image would be infinitely l
 In light of these considerations it becomes apparent that proper choice of pixel numbers and their size
          is instrumental to maximizing the full resolving power of a microscope. Here, the Nyquist-Shannon sampling 
          theorem dictates that a continuous analog signal should be oversampled by at least a factor of two to
-         obtain an accurate digital representation [14]. Therefore, to image with a resolution of e.g. 250 nanometers, 
+         obtain an accurate digital representation. Therefore, to image with a resolution of e.g. 250 nanometers, 
          pixels should be smaller than 125 nanometers. This way, the intensity drop between two  overlapping Airy functions 
          can be detected as to satisfy the Rayleigh criterion. One could always use more pixels than needed according to the 
          theorem, i.e. oversample. However, a point emitter only emits a finite number of photons, spreading these out over too 
@@ -207,6 +207,7 @@ In light of these considerations it becomes apparent that proper choice of pixel
          
 Source: Vangindertael et al., "An Introduction to optical super-resolution microscopy for the adventurous biologist", Methods Appl. Fluoresc.
          6 (2018) 022003""")
+
 
 
 
